@@ -188,7 +188,7 @@ function addUniversityMiniExhibition(){
   const t=new THREE.CanvasTexture(c);t.colorSpace=THREE.SRGBColorSpace;return t;
  }
  // Faixa de apresentação afixada à parede direita, voltada para a sala.
- const sign=new THREE.Mesh(new THREE.PlaneGeometry(4.6,1.08),new THREE.MeshBasicMaterial({map:captionTexture('ORGULHO UFABC','Ciência, criatividade e comunidade'),side:THREE.DoubleSide}));
+ const sign=new THREE.Mesh(new THREE.PlaneGeometry(4.6,1.08),new THREE.MeshBasicMaterial({map:captionTexture('ORGULHO UFABC','Ciência, natureza e tecnologia'),side:THREE.DoubleSide}));
  sign.position.set(12.10,3.55,0);sign.rotation.y=-Math.PI/2;scene.add(sign);
  // Dois pedestais compactos, sem bloquear a passagem pelo centro do salão.
  function pedestal(z,label,sub){
