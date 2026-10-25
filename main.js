@@ -165,10 +165,10 @@ function addUniversityFrame(side,z,index,title){
   photo.material.map.dispose();photo.material.map=texture;photo.material.needsUpdate=true;
  },undefined,()=>{});
 }
-addUniversityFrame('left',-8,1,'UFABC · CAMPUS');
-addUniversityFrame('left',8,2,'UFABC · NOSSA UNIVERSIDADE');
-addUniversityFrame('right',-5.5,3,'UFABC · CIÊNCIA');
-addUniversityFrame('right',5.5,4,'UFABC · EDUCAÇÃO');
+addUniversityFrame('left',-8,1,'UFABC · CAMPUS SBC');
+addUniversityFrame('left',8,2,'UFABC · CAMPUS SA');
+addUniversityFrame('right',-5.5,3,'UFABC · LABORATÓRIO');
+addUniversityFrame('right',5.5,4,'UFABC · CAMPUS SBC');
 
 
 // Exposição comemorativa entre os dois quadros da parede direita.
