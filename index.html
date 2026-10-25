@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+ <meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+ <meta name="theme-color" content="#12171d"/>
+ <title>Museu Vivo | Arte & Biologia</title>
+ <link rel="stylesheet" href="./style.css"/>
+ <script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.180.0/examples/jsm/"}}</script>
+</head>
+<body>
+ <div id="scene"></div>
+ <div id="hud"><div class="brand">MUSEU <span>VIVO</span><small>Arte × Biologia</small></div><div id="room">Galeria · Uma jornada pelo corpo humano</div><div id="progress">Obras desta sala: <b id="count">0/4</b></div></div>
+ <div id="crosshair">+</div><div id="hint">Aproxime-se de uma obra e pressione <b>E</b> ou clique para examiná-la.</div>
+ <div id="start" class="overlay"><div class="panel intro"><div class="eyebrow">EXPERIÊNCIA INTERATIVA · PERCURSO INTERATIVO</div><h1>O corpo humano<br><em>através da arte.</em></h1><p>Explore o lobby e atravesse portas para viajar pela história da representação do corpo, da arte rupestre às expressões contemporâneas.</p><div class="controls"><span><b>W A S D</b> andar</span><span><b>Shift</b> correr</span><span><b>Espaço</b> pular</span><span><b>Mouse</b> olhar</span><span><b>E / Clique</b> investigar / atravessar portas</span><span><b>ESC</b> pausar</span></div><button id="play" class="primary">ENTRAR NO MUSEU <span>↗</span></button><small>No celular: use o joystick à esquerda, arraste o dedo na tela para olhar e toque em INTERAGIR. Requer internet para carregar Three.js.</small></div></div>
+ <div id="detail" class="overlay hidden"><div class="panel detail-panel"><button class="close" id="close-detail" aria-label="Fechar">×</button><div id="detail-era" class="eyebrow"></div><h2 id="detail-title"></h2><div class="detail-layout"><div id="detail-art"></div><div><p id="detail-desc"></p><h3>ONDE ESTÁ A BIOLOGIA?</h3><p id="detail-bio"></p><div class="question" id="detail-question"></div></div></div><button class="primary" id="continue">CONTINUAR EXPLORANDO →</button></div></div>
+ <div id="quiz" class="overlay hidden"><div class="panel quiz-panel"><div class="eyebrow">DESAFIO FINAL · 3 PERGUNTAS</div><h2>O que você descobriu?</h2><div id="quiz-body"></div><div id="quiz-result" aria-live="polite"></div><button id="quiz-next" class="primary" disabled>CONFIRMAR RESPOSTA</button><button id="quiz-close" class="secondary">VOLTAR AO MUSEU</button></div></div>
+ <div id="finish" class="overlay hidden"><div class="panel intro finale-panel"><div class="eyebrow">FIM DO PERCURSO · MUSEU VIVO</div><h1>Obrigado por visitar<br><em>o Museu Vivo!</em></h1><p>Da arte rupestre à arte contemporânea, percorremos diferentes maneiras de representar e compreender o corpo humano e a natureza.</p><p>A arte e a ciência mostram que a beleza não depende de proporções perfeitas: ela também está na diversidade, nas diferenças e nas histórias de cada pessoa.</p><h3>Créditos aos alunos idealizadores</h3><p class="credits-names">Fernanda Bertão<br>Gabriel Manfredini<br>Giovanna Figueiros<br>Milena Silva<br>Victoria Galvao</p><small>Projeto extensionista · Universidade Federal do ABC (UFABC)</small><div class="final-actions"><button id="finish-return" class="primary">VOLTAR AO LOBBY</button><button id="finish-quiz" class="primary">RESPONDER AO DESAFIO FINAL</button></div></div></div>
+ <button id="quiz-open" class="quiz-trigger" type="button">✦ Desafio final</button>
+ <div id="mobile-controls" aria-label="Controles para celular">
+  <div id="mobile-stick" aria-label="Joystick para caminhar"><div id="mobile-knob"></div></div>
+  <div class="mobile-actions"><button id="mobile-use" type="button">INTERAGIR</button><button id="mobile-run" type="button">CORRER</button><button id="mobile-jump" type="button">PULAR</button><button id="mobile-pause" type="button">PAUSAR</button></div>
+</div>
+ <script type="module" src="./main.js"></script>
+</body>
+</html>
